@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Study Companion</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  
+
+</head>
+<body>
+  <div class="container">
+    <div class="chat-header">
+      <h1><i class="fas fa-robot"></i>
+ AI Study Companion</h1>
+<button id="theme-toggle">🌙</button>
+
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="chat">Chat</button>
+      <button class="tab-btn" data-tab="summarizer">Summarizer</button>
+      <button class="tab-btn" data-tab="quiz">Quiz Generator</button>
+    </div>
+
+    <!-- Chat Section -->
+    <div class="tab-content active" id="chat">
+      <div class="chat-box" id="chat-box"></div>
+      <div class="chat-input">
+        <input type="text" id="user-input" placeholder="Ask me anything...">
+        <button id="send-btn"><button id="voice-btn">🎤</button>
+<i class="fas fa-paper-plane"></i></button>
+        <label><input type="checkbox" id="step-by-step"> Step-by-Step</label>
+      </div>
+    </div>
+
+    <!-- Summarizer Section -->
+    <div class="tab-content" id="summarizer">
+      <textarea id="summary-text" placeholder="Paste your chapter or text here..."></textarea>
+      <button id="summarize-btn">Summarize</button>
+      <div id="summary-result"></div>
+    </div>
+
+    <!-- Quiz Section -->
+    <div class="tab-content" id="quiz">
+      <input type="text" id="quiz-topic" placeholder="Enter topic...">
+      <input type="number" id="num-questions" placeholder="Number of questions" value="5">
+      <button id="quiz-btn">Generate Quiz</button>
+      <div id="quiz-result"></div>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
